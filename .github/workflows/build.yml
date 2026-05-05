@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v3
@@ -26,4 +26,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: custom-gfn-client-windows
-        path: dist/custom-gfn-client Setup 1.0.0.exe
+        path: dist/CustomGFNClient Setup *.exe

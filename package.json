@@ -2,6 +2,7 @@
   "name": "custom-gfn-client",
   "version": "1.0.0",
   "description": "A custom Electron client for GeForce NOW with a post-processing pipeline.",
+  "author": "goldodemon",
   "main": "main.js",
   "scripts": {
     "start": "electron . --disable-frame-rate-limit --enable-gpu-rasterization",
@@ -11,5 +12,16 @@
     "electron": "^28.0.0",
     "electron-builder": "^24.9.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "build": {
+    "appId": "com.goldodemon.customgfn",
+    "productName": "CustomGFNClient",
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
 }
